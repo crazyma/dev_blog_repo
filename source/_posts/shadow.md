@@ -1,5 +1,5 @@
 ---
-title: How to remove toolbar shadow 去除 Toolbar 的陰影
+title: How to remove toolbar shadow / 去除 Toolbar 的陰影
 date: 2017-04-11 12:44:17
 categories: AndroidDev
 tags: [Android, Toolbar]
@@ -11,7 +11,7 @@ tags: [Android, Toolbar]
 </br>
 這裡提出幾個解決方法:
 </br>
-**1. 將 AppBarLayout 的 elevation設為 0**
+**[方法1]  將 AppBarLayout 的 elevation設為 0**
 
 此作法會除掉上下陰影
 
@@ -37,11 +37,11 @@ tags: [Android, Toolbar]
     ...
 
 </android.support.design.widget.CoordinatorLayout>
-```
+```q
 </br>
 {% img /shadow/device-2017-04-11-134158.png 539 125 %}
 </br>
-**2. remove `android:windowDrawsSystemBarBackgrounds`**
+**[方法2]  remove `android:windowDrawsSystemBarBackgrounds`**
 此參數就是通知系統：由我們自己決定 status bar 的顏色。
 通常是為了給有 `DrawerLayout` 的**OverLay Status Bar** 之效果使用。如果你沒有要使用，則可以直接移除
 
@@ -57,7 +57,7 @@ tags: [Android, Toolbar]
 </br>
 {% img /shadow/device-2017-04-11-135523.png 540 125 %}
 </br>
-**3. remove `fitsSystemWindows` (optional)**
+
 如果你也沒有其他東西會 Overlay 到 status bar，你也可以把 `fitsSystemWindows` 刪掉
 ``` xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -72,6 +72,18 @@ tags: [Android, Toolbar]
 </android.support.design.widget.CoordinatorLayout>
 
 ```
+
+**[方法3]  change  `android:statusBarColor`**
+``` xml
+<style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+    <!-- <item name="android:statusBarColor">@android:color/transparent</item> -->
+</style>
+```
+
 
 ### Reference
 - [How to remove top border shadow from ActionBar](http://stackoverflow.com/questions/34210184/how-to-remove-top-border-shadow-from-actionbar)
