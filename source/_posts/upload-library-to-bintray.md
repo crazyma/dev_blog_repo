@@ -8,7 +8,7 @@ tags: [Android, Bintray, JCenter, library]
 許多 Library 也都放在 JCenter
 這篇文章以我自己做的 JsonCake Library
 簡單示範如何上傳自己的 Library
-
+<!-- more -->
 ## Step 1. 註冊帳號
 首先至 [Bintray](https://bintray.com/) 上註冊帳號
 

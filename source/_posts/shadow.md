@@ -10,6 +10,7 @@ tags: [Android, Toolbar]
 {% img /shadow/device-2017-04-11-133533.png 538 136 XDDDd %}
 </br>
 這裡提出幾個解決方法:
+<!-- more -->
 </br>
 **[方法1]  將 AppBarLayout 的 elevation設為 0**
 

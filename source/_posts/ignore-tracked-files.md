@@ -5,7 +5,7 @@ categories: Dev
 tags: [git, gitignore]
 ---
 這篇簡單介紹要怎麼 ignore 你已經 tracked 的文件
-
+<!-- more -->
 ## Method 1 : `git rm`
 
 ### Step 1: Run this comment
