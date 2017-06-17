@@ -71,3 +71,7 @@ deploy:
   type: git
   repo: https://github.com/crazyma/crazyma.github.io
   branch: master
+
+# Disqus
+disqus_shortname: blog-ma-beibeilab-com
+disqus: true
