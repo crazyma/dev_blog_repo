@@ -25,7 +25,7 @@ variables:
   ANDROID_SDK_TOOLS: "25.2.5"
 
 before_script:
-  - export ANDROID_HOME=/Users/25sprout/Workspace/Android/sdk/
+  - export ANDROID_HOME=<your_android_sdk_path>
 
 stages:
   - test
@@ -50,7 +50,7 @@ instrumentTests:
   script:
     - chmod +x ./wait-emulator
     - chmod +x ./run_instrument_test
-    - /Users/25sprout/Workspace/Android/sdk/tools/emulator -avd Nexus9API23 -no-audio & ./wait-emulator
+    - <your_android_sdk_path>/tools/emulator -avd Nexus9API23 -no-audio & ./wait-emulator
     - ./run_instrument_test
   artifacts:
     when: on_failure
@@ -131,7 +131,7 @@ artifacts:
 script:
     - chmod +x ./wait-emulator
     - chmod +x ./run_instrument_test
-    - /Users/25sprout/Workspace/Android/sdk/tools/emulator -avd Nexus9API23 -no-audio & ./wait-emulator
+    - <your_android_sdk_path>tools/emulator -avd Nexus9API23 -no-audio & ./wait-emulator
     - ./run_instrument_test
 ```
 - 這裡使用模擬器來跑測試。你需要**事先建好你的模擬器**
